@@ -7,7 +7,7 @@ import { faHeartBroken, faHeart, faShoppingCart } from '@fortawesome/free-solid-
 
 import styles from './ProductCard.module.scss';
 
-const ProductCard = ({name, image, price, category, likes, dislikes}) => {
+const ProductCard = ({ id, name, image, price, category, likes, dislikes, addToCart}) => {
   return (
     <div className={styles.component}>
       <span className={styles.tag}>{category}<br/>{ category }</span>
@@ -19,7 +19,7 @@ const ProductCard = ({name, image, price, category, likes, dislikes}) => {
           <span className={styles.rate}><FontAwesomeIcon icon={faHeart} /> {likes}</span>
           <span className={styles.rate}><FontAwesomeIcon icon={faHeartBroken} /> {dislikes}</span>
         </div>
-        <Button variant='success'><FontAwesomeIcon icon={faShoppingCart} /> Add to cart</Button>
+        <Button variant='success' onClick={() => addToCart(id, name, image, category, price)}><FontAwesomeIcon icon={faShoppingCart} /> Add to cart</Button>
       </div>
     </div>
   );
@@ -32,6 +32,7 @@ ProductCard.propTypes = {
   category: PropTypes.string,
   likes: PropTypes.number,
   dislikes: PropTypes.number,
+  addToCart: PropTypes.func,
 };
 
 export default ProductCard;

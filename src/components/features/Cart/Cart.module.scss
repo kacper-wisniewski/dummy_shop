@@ -1,0 +1,47 @@
+.component {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  color: #000;
+  background-color: #fff;
+  font-size: 1.5em;
+  border-radius: 20%;
+  color: #EA2027;
+}
+
+.cartView {
+  z-index: 100;
+  color: #000;
+  right: 0;
+  bottom: -100;
+  position: absolute;
+  width: 1000px;
+  background: #fff;
+}
+
+.cartProduct {
+  display: flex;
+  padding: 20px;
+  
+  img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+.cartDescription {
+  width: 100%;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #000;
+  
+  h3 {
+    font-size: .7em;
+  }
+
+  span {
+    display: block;
+    font-size: .5em;
+  }
+}

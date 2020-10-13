@@ -2,9 +2,13 @@ import { combineReducers, createStore } from 'redux';
 import initialState from './initialState';
 
 import productsReducer from  './productsRedux';
+import cartReducer from './cartRedux';
+import categoriesReducer from './categoriesRedux';
 
 const reducers = {
   products: productsReducer,
+  cart: cartReducer,
+  categories: categoriesReducer,
 };
 
 Object.keys(initialState).forEach(item => {
