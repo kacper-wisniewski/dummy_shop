@@ -1,0 +1,54 @@
+.component {
+  box-sizing: border-box;
+  padding: 100px 10px;
+  background-color: #dfe4ea;
+  min-height: 100vh;
+}
+
+.listNavigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.dot {
+  margin: 0 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #000;
+  transition: .3s;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.dotActive {
+  margin: 0 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: #000;
+  animation: nowActive .3s;
+}
+
+@keyframes nowActive {
+  0% {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  33% {
+    background: #fff;
+  }
+  66% {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    background: #000;
+  }
+}

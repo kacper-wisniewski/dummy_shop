@@ -1,2 +1,3 @@
-# Dummy shop
-Based on Fake Store API
+# Simple web store app using dummy data
+
+## To run project  `yarn start`

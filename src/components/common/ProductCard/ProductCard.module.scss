@@ -1,0 +1,68 @@
+.component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 10px 0; 
+  background: #fff;
+  box-shadow: #000 2px 2px 5px 0;
+  overflow: hidden;
+  padding: 20px 0;
+
+  img {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  &:hover .buttons {
+    transform: translateY(0);
+  }
+}
+
+.tag {
+  top: 0;
+  left: 50%;
+  position: absolute;
+  background-color: #EA2027;
+  border-radius: 50px;
+  padding: 5px 40px;
+  color: #fff;
+  font-size: 0.7em;
+  transform: translate(-50%,-50%);
+}
+
+.price {
+  font-size: 1.1em;
+  margin: auto;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  width:100%;
+  transition: .3s;
+}
+
+.opinions{
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rate {
+  font-size: 1.2em;
+  color: #fff;
+}
