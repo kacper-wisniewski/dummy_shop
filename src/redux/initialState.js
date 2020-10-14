@@ -8,7 +8,18 @@ const initialState = {
     { id: 'chains', name: 'Chains' },
   ],
   products: [
-    
+    {
+      id: 1,
+      name: 'The coolest sneakers',
+      description: 'Those are the coolest sneakers in the whole world! You won`t be able to find any coolest skeakers in your life',
+      image: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+      category: 'sneakers',
+      price: 30,
+      isNew: false,
+      comprasion: false,
+      likes: 123,
+      dislikes: 21,
+    },
     {
       id: 2,
       name: 'The coolest sneakers',

@@ -44,9 +44,8 @@ class ProductList extends React.Component{
 
 
   render() {
-    const { products, addToCart } = this.props;
+    const { products, addToCart, count} = this.props;
     const { currentPage, productsOnPage, dots } = this.state;
-
     return (
       <div className={styles.component}>
         <Container >
@@ -55,9 +54,7 @@ class ProductList extends React.Component{
               <ul className={styles.listNavigation}>
                 <li onClick={() => this.handlePreviousPage()}><FontAwesomeIcon icon={faChevronLeft} /></li>
                 {dots.map(elem => (
-                  <>
-                  {currentPage === elem.id ? <li key={elem.id} className={styles.dotActive} onClick={() => this.handleChangePage(elem.id)}></li> : <li key={elem.id} className={styles.dot} onClick={() => this.handleChangePage(elem.id)}></li>}
-                  </>
+                  <li key={elem.id} className={currentPage === elem.id ? styles.dotActive : styles.dot } onClick={() => this.handleChangePage(elem.id)}></li>
                 ))}
                 <li onClick={() => this.handleNextPage()}><FontAwesomeIcon icon={faChevronRight} /></li>
               </ul>
@@ -65,11 +62,18 @@ class ProductList extends React.Component{
             </Col>
           </Row>
           <Row xs={1} md={2} lg={3}>
-            {products.slice(currentPage * productsOnPage, (currentPage + 1) * productsOnPage).map(elem => (
-              <Col key={elem.id}>
-                <ProductCard {...elem} addToCart={addToCart} />
-              </Col>
-            ))}
+            {count > 0 ? 
+            <>
+              {products.slice(currentPage * productsOnPage, (currentPage + 1) * productsOnPage).map(elem => (
+                <Col key={elem.id}>
+                  <ProductCard {...elem} addToCart={addToCart} />
+                </Col>
+              ))}
+            </> :
+            <Col>
+              <h2>We have no products in that category</h2>
+            </Col>
+            }
           </Row>
         </Container>
       </div>

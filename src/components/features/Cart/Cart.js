@@ -12,7 +12,12 @@ class Cart extends React.Component {
   }
 
   handleCartViewChange = () => {
-    this.setState({ open: !this.state.open})
+    const { cart } = this.props;
+    if(cart.length > 0) {
+      this.setState({ open: !this.state.open});
+    } else {
+      this.setState({ open: false });
+    }
   };
 
   render() {
@@ -35,7 +40,14 @@ class Cart extends React.Component {
                   <span>{ elem.category }</span> 
                 </div>
                 <div className={styles.buttons}>
-                  <Button variant='danger' onClick={() => removeFromCart(elem)}><FontAwesomeIcon icon={faTimes} /></Button>
+                  <Button 
+                  variant='danger' 
+                  onClick={() => {
+                    removeFromCart(elem); 
+                    if (!(cart.length > 0)) this.handleCartViewChange()
+                  }}>
+                    <FontAwesomeIcon icon={faTimes} />
+                  </Button>
                 </div>
               </div>
             ))}

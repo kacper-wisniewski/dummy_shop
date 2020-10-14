@@ -5,6 +5,7 @@ import { Container, Row, } from 'react-bootstrap';
 import styles from './Header.module.scss';
 
 import Cart from '../../features/Cart/CartContainer'
+import Navigation from '../../features/Navigation/Navigation';
 class Header extends React.Component {
 
   render() {
@@ -14,6 +15,7 @@ class Header extends React.Component {
         <Container>
           <Row className={styles.row}>
             <span className={styles.brand}><h1>Dummy Store</h1></span>
+            <Navigation categories={categories} />
             <Cart />
           </Row>
         </Container>

@@ -2,10 +2,11 @@ import { connect } from 'react-redux';
 
 import ProductList from './ProductList';
 import { addProduct } from '../../../redux/cartRedux';
+import { getFiltred, getFiltredCount } from '../../../redux/productsRedux';
 
-const mapStateToProps = (state) => ({
-  products: state.products,
-  count: state.products.length,
+const mapStateToProps = (state, props) => ({
+  products: getFiltred(state, props.match.params.filter),
+  count: getFiltredCount(state, props.match.params.filter),
 })
 
 const mapDispatchToProps = dispatch => ({
