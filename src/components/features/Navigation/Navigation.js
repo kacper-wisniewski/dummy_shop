@@ -16,7 +16,6 @@ const Navigation = ({ categories }) => {
           {categories.map(elem => (
             <li className={styles.dropdownElement}  key={elem.id}><NavLink className={styles.dropdownElement} to={`/products/${elem.id}`}>{elem.name}</NavLink></li>
           ))}
-          <li className={styles.dropdownElement}><NavLink className={styles.dropdownElement} to='/products/all'>All</NavLink></li>
         </NavDropdown>
       </Nav>
     </Navbar>

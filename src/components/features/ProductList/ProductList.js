@@ -13,16 +13,7 @@ class ProductList extends React.Component{
   state = {
     currentPage: 0,
     productsOnPage: 12,
-    dots: [],
   };
-  
-  componentWillMount () {
-    const { count } = this.props;
-    const { productsOnPage, dots } = this.state;
-    for (let i = 0; i * productsOnPage <= count; i++) {
-      dots.push({id: i, name: `${i}`});
-    };
-  }
 
   handleNextPage = () => {
     const { count } = this.props;
@@ -38,14 +29,13 @@ class ProductList extends React.Component{
   };
 
   handleChangePage = (id) => {
-    console.log(id);
     this.setState({ currentPage: id });
   }
 
 
   render() {
-    const { products, addToCart, count} = this.props;
-    const { currentPage, productsOnPage, dots } = this.state;
+    const { products, addToCart, count, dots} = this.props;
+    const { currentPage, productsOnPage } = this.state;
     return (
       <div className={styles.component}>
         <Container >
