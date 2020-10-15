@@ -5,6 +5,7 @@ import Header from './Header';
 
 const mapStateToProps = (state) => ({
   categories: getAll(state),
+  banners: state.banners,
 })
 
 export default connect(mapStateToProps)(Header);

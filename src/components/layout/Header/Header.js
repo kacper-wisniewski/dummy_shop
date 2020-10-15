@@ -6,10 +6,11 @@ import styles from './Header.module.scss';
 
 import Cart from '../../features/Cart/CartContainer'
 import Navigation from '../../features/Navigation/Navigation';
-class Header extends React.Component {
+import Hero from '../../features/Hero/Hero';
 
+class Header extends React.Component {
   render() {
-    const { categories } = this.props;
+    const { categories, banners } = this.props;
     return (
       <header className={styles.component}>
         <Container>
@@ -19,6 +20,7 @@ class Header extends React.Component {
             <Cart />
           </Row>
         </Container>
+        <Hero banners={banners} />
       </header>
     );
   }
@@ -26,6 +28,7 @@ class Header extends React.Component {
 
 Header.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.object),
+  banners:PropTypes.arrayOf(PropTypes.object),
 };
 
 export default Header;

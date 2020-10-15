@@ -1,11 +1,13 @@
 .component {
   box-sizing: border-box;
   padding: 100px 10px;
-  background-color: #dfe4ea;
+  background: #dfe4ea;
   min-height: 100vh;
 }
 
 .listNavigation {
+  margin: 0;
+  padding: 0;
   width: 100%;
   display: flex;
   justify-content: center;

@@ -427,7 +427,7 @@ const initialState = {
       image: 'https://images.unsplash.com/photo-1524600123477-909fbe45c9ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80',
       category: 'chains',
       price: 43,
-      isNew: false,
+      isNew: true,
       comprasion: false,
       likes: 31,
       dislikes: 1,
@@ -487,7 +487,7 @@ const initialState = {
       image: 'https://images.unsplash.com/photo-1567962446999-7fdcb480208b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80',
       category: 'chains',
       price: 59.99,
-      isNew: false,
+      isNew: true,
       comprasion: false,
       likes: 31,
       dislikes: 1,
@@ -526,7 +526,37 @@ const initialState = {
     { id: 1, productId: 4 },
     { id: 2, productId: 15 },
     { id: 3, productId: 27 },
-  ]
+  ],
+  banners: [
+    {
+      id: 1, 
+      image: 'https://images.unsplash.com/photo-1545007805-a44ee83438fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+      alt: 'First Banner',
+      title: 'We have the biggest choice of cool clothes',
+      description: 'In our store you will surely find clothes for yourself. Choose your perfect outfit and we will deliver it straight to your home.',
+    },
+    {
+      id: 2, 
+      image: 'https://images.unsplash.com/photo-1601135362309-39ed976cff85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+      alt: 'Second Banner',
+      title: 'We have the biggest choice of cool clothes',
+      description: 'In our store you will surely find clothes for yourself. Choose your perfect outfit and we will deliver it straight to your home.',
+    },
+    {
+      id: 3, 
+      image: 'https://images.unsplash.com/photo-1584093091778-e7f4e76e8063?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      alt: 'Third Banner',
+      title: 'We have the biggest choice of cool clothes',
+      description: 'In our store you will surely find clothes for yourself. Choose your perfect outfit and we will deliver it straight to your home.',
+    },
+    {
+      id: 4, 
+      image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      alt: 'Fourth Banner',
+      title: 'We have the biggest choice of cool clothes',
+      description: 'In our store you will surely find clothes for yourself. Choose your perfect outfit and we will deliver it straight to your home.',
+    },
+  ],
 }
 
 export default initialState;

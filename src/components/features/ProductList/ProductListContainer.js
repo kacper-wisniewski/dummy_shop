@@ -16,6 +16,11 @@ const mapStateToProps = (state, props) => ({
   products: getFiltred(state, props.match.params.filter),
   count: getFiltredCount(state, props.match.params.filter),
   dots: getDots(getFiltred(state, props.match.params.filter)),
+  category: state.categories.filter(elem => {
+    if (elem.id === props.match.params.filter) {
+      return `${elem.name}`;
+    }
+  }),
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -41,11 +41,16 @@ class ProductList extends React.Component{
   }
 
   render() {
-    const { products, addToCart, count, dots} = this.props;
+    const { products, addToCart, count, dots, category} = this.props;
     const { currentPage, productsOnPage } = this.state;
     return (
       <div className={styles.component}>
         <Container >
+          <Row>
+            <Col>
+              <h2>{category.map(elem => (elem.name))}</h2>
+            </Col>
+          </Row>
           <Row xs={1}>
             {count > 0 ?
               <Col>
