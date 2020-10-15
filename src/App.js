@@ -18,7 +18,6 @@ function App() {
         <MainLayout>
           <Switch>
             <Route path='/products/:filter' component={ProductList}></Route>
-            <Route path='/products' component={ProductList}></Route>
             <Route path='/bestsellers'><h1>Bestsellers</h1></Route>
             <Route path='/promo'><h1>Promo</h1></Route>
             <Route path='/'><h1>Home</h1></Route>
