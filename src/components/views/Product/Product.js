@@ -17,9 +17,12 @@ const Product = ({ product, opinions, addToCart }) => {
           <Col>
             <h2>{product.name}</h2>
             <p>{product.description}</p>
-            <div><b>${product.isPromo? (product.price - product.price * product.promo / 100)  : product.price }</b>{product.isPromo ? <sup><s>${product.price}</s></sup> : <></> }</div>
+            <div><b>${product.isPromo? Math.ceil(product.price - Math.floor(product.price * product.promo / 100))  : product.price }</b>{product.isPromo ? <sup><s>${product.price}</s></sup> : <></> }</div>
             <Button variant='success' onClick={() => addToCart(product)}><FontAwesomeIcon icon={faShoppingCart} /> Add to cart</Button>
           </Col>
+        </Row>
+        <Row>
+          <Col><h2>User's opinions</h2></Col>
         </Row>
         {opinions.length > 0 ?
           <Row>
@@ -32,7 +35,7 @@ const Product = ({ product, opinions, addToCart }) => {
               ))}
             </Col>
           </Row> :
-          <></>
+          <h3>Ooops... that product doesn't have any opinions</h3>
         }
       </Container>
     </div>

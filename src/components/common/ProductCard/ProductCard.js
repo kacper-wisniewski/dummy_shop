@@ -16,7 +16,7 @@ const ProductCard = ({ id, name, description, image, category, price, isRate, is
       {isNew ? <span className={styles.newTag}>NEW</span> : <></>}
       <img src={ image } alt={ name } />
       <h3>{ name }</h3>
-      <span className={styles.price}><b>${isPromo? (price - price * promo / 100)  : price }</b>{isPromo ? <sup><s>${price}</s></sup> : <></> }</span>
+      <span className={styles.price}><b>${isPromo? Math.ceil(price - Math.floor(price * promo / 100))  : price }</b>{isPromo ? <sup><s>${price}</s></sup> : <></> }</span>
       <div className={styles.buttons}>
         <div className={styles.opinions}>
           {isRate ? 

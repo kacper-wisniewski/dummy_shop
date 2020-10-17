@@ -705,43 +705,108 @@ const initialState = {
     {
       id: 2,
       data: [
-
+        {
+          id: 1,
+          user: 'John Doe',
+          text: 'I like it',
+        },
+        {
+          id: 2,
+          user: 'Don Johe',
+          text: 'Lorem ipsum',
+        }
       ],
     },
     {
       id: 3,
       data: [
+        {
+          id: 1,
+          user: 'John Doe',
+          text: 'Lorem Ipsum',
+        },
+        {
+          id: 2,
+          user: 'Don Johe',
+          text: 'Nice sneakers',
+        }
 
       ],
     },
     {
       id: 4,
       data: [
+        {
+          id: 1,
+          user: 'John Doe',
+          text: 'Lorem',
+        },
+        {
+          id: 2,
+          user: 'Don Johe',
+          text: 'Ipsum',
+        }
 
       ],
     },
     {
       id: 5,
       data: [
-
+        {
+          id: 1,
+          user: 'John Doe',
+          text: 'That`s nice',
+        },
+        {
+          id: 2,
+          user: 'Don Johe',
+          text: 'Cool',
+        }
       ],
     },
     {
       id: 6,
       data: [
-
+        {
+          id: 1,
+          user: 'John Doe',
+          text: 'Nice!',
+        },
+        {
+          id: 2,
+          user: 'Don Johe',
+          text: 'Nice sneakers',
+        }
       ],
     },
     {
       id: 7,
       data: [
-
+        {
+          id: 1,
+          user: 'John Doe',
+          text: 'Awesome',
+        },
+        {
+          id: 2,
+          user: 'Don Johe',
+          text: '+1',
+        }
       ],
     },
     {
       id: 8,
       data: [
-
+        {
+          id: 1,
+          user: 'John Doe',
+          text: 'Awesome stuff',
+        },
+        {
+          id: 2,
+          user: 'Don Johe',
+          text: 'Awesome sneakers',
+        }
       ],
     },
     {
@@ -915,7 +980,11 @@ const initialState = {
     {
       id: 37,
       data: [
-
+        {
+          id: 1,
+          user: 'John Doe',
+          text: 'Dope chain',
+        }
       ],
     },
     {

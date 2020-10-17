@@ -28,7 +28,7 @@ const mapStateToProps = (state, props) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  addToCart: ( id, name, image, category, price ) => dispatch(addProduct({id, name, image, category, price})),
+  addToCart: ( id, name, image, category, price, isPromo, promo ) => dispatch(addProduct({id, name, image, category, price, isPromo, promo})),
   removeRate: ( id, name, description, image, category, price, isRate, isNew, isPromo, promo, comprasion, likes, dislikes ) => dispatch(removeRate({id, name, description, image, category, price, isRate, isNew, isPromo, promo, comprasion, likes, dislikes})),
   addRate: ( id, name, description, image, category, price, isRate, isNew, isPromo, promo, comprasion, likes, dislikes ) => dispatch(addRate({id, name, description, image, category, price, isRate, isNew, isPromo, promo, comprasion, likes, dislikes})),
 })

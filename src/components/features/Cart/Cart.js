@@ -23,6 +23,7 @@ class Cart extends React.Component {
   render() {
     const { cart, removeFromCart } = this.props;
     const { open } = this.state;
+    console.log(cart);
     return (
       <div className={styles.component}>
         <div onClick={() => this.handleCartViewChange()}>
@@ -36,7 +37,7 @@ class Cart extends React.Component {
                 <img src={elem.image} alt={elem.name}></img>
                 <div className={styles.cartDescription}>
                   <h3>{ elem.name } <sup>id: { elem.id }</sup></h3>
-                  <span></span><b>${ elem.price }</b>
+                  <span></span><b>${elem.isPromo? Math.ceil(elem.price - Math.floor(elem.price * elem.promo / 100))  : elem.price }</b>{elem.isPromo ? <sup><s>${elem.price}</s></sup> : <></> }
                   <span>{ elem.category }</span> 
                 </div>
                 <div className={styles.buttons}>
