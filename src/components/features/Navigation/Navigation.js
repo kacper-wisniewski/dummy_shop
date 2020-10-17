@@ -10,8 +10,7 @@ const Navigation = ({ categories }) => {
     <Navbar>
       <Nav>
         <NavLink className={styles.navElement} to='/'>Home</NavLink>
-        <NavLink className={styles.navElement} to='/bestsellers'>Bestsellers</NavLink>
-        <NavLink className={styles.navElement} to='/promo'>Promo</NavLink>
+        <NavLink className={styles.navElement} to='/featured'>Featured</NavLink>
         <NavDropdown className={styles.navElement} title='Products' size={'sm'}>
           {categories.map(elem => (
             <li className={styles.dropdownElement}  key={elem.id}><NavLink className={styles.dropdownElement} to={`/products/${elem.id}`}>{elem.name}</NavLink></li>

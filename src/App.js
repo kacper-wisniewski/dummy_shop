@@ -10,6 +10,8 @@ import store from './redux/store';
 import MainLayout from './components/layout/MainLayout/MainLayout'
 
 import ProductList from './components/features/ProductList/ProductListContainer';
+import Special from './components/views/Special/SpecialContainer';
+import Product from './components/views/Product/ProductContainer';
 
 function App() {
   return (
@@ -17,9 +19,9 @@ function App() {
       <Provider store={store}>
         <MainLayout>
           <Switch>
-            <Route path='/products/:filter' component={ProductList}></Route>
-            <Route path='/bestsellers'><h1>Bestsellers</h1></Route>
-            <Route path='/promo'><h1>Promo</h1></Route>
+            <Route path='/products/view/:id' component={Product}></Route>
+            <Route path='/products/:filter' component={ProductList} />
+            <Route path='/featured' component={Special} />
             <Route path='/'><h1>Home</h1></Route>
           </Switch>
         </MainLayout>

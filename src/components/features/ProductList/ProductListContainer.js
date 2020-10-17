@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import ProductList from './ProductList';
 import { addProduct } from '../../../redux/cartRedux';
-import { getFiltred, getFiltredCount } from '../../../redux/productsRedux';
+import { getFiltred, getFiltredCount, removeRate, addRate } from '../../../redux/productsRedux';
 
 const getDots = (products) => {
   const dots = [];
@@ -12,19 +12,25 @@ const getDots = (products) => {
   return dots
 }
 
+const getCategory = (categories, filter) => {
+  return (categories.filter(elem => {
+    if (elem.id === filter) {
+      return `${elem.name}`;
+    }
+  }));
+};
+
 const mapStateToProps = (state, props) => ({
   products: getFiltred(state, props.match.params.filter),
   count: getFiltredCount(state, props.match.params.filter),
   dots: getDots(getFiltred(state, props.match.params.filter)),
-  category: state.categories.filter(elem => {
-    if (elem.id === props.match.params.filter) {
-      return `${elem.name}`;
-    }
-  }),
+  category: getCategory(state.categories, props.match.params.filter),
 })
 
 const mapDispatchToProps = dispatch => ({
-  addToCart: ( id, name, image, category, price ) => dispatch(addProduct({id, name, image, category, price}))
+  addToCart: ( id, name, image, category, price ) => dispatch(addProduct({id, name, image, category, price})),
+  removeRate: ( id, name, description, image, category, price, isRate, isNew, isPromo, promo, comprasion, likes, dislikes ) => dispatch(removeRate({id, name, description, image, category, price, isRate, isNew, isPromo, promo, comprasion, likes, dislikes})),
+  addRate: ( id, name, description, image, category, price, isRate, isNew, isPromo, promo, comprasion, likes, dislikes ) => dispatch(addRate({id, name, description, image, category, price, isRate, isNew, isPromo, promo, comprasion, likes, dislikes})),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

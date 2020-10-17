@@ -41,7 +41,7 @@ class ProductList extends React.Component{
   }
 
   render() {
-    const { products, addToCart, count, dots, category} = this.props;
+    const { products, addToCart, count, dots, category, addRate, removeRate } = this.props;
     const { currentPage, productsOnPage } = this.state;
     return (
       <div className={styles.component}>
@@ -70,7 +70,7 @@ class ProductList extends React.Component{
             <>
               {products.slice(currentPage * productsOnPage, (currentPage + 1) * productsOnPage).map(elem => (
                 <Col key={elem.id}>
-                  <ProductCard {...elem} addToCart={addToCart} />
+                  <ProductCard {...elem} addToCart={addToCart} addRate={addRate} removeRate={removeRate}/>
                 </Col>
               ))}
             </> :
@@ -89,6 +89,8 @@ ProductList.propTypes = {
   products: PropTypes.arrayOf(PropTypes.object),
   count: PropTypes.number,
   addToCart: PropTypes.func,
+  removeRate: PropTypes.func,
+  addRate: PropTypes.func,
   initialPage: PropTypes.number,
 }
 

@@ -37,6 +37,26 @@
   transform: translate(-50%,-50%);
 }
 
+.promoTag {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #EA2027;
+  padding: 8px 24px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.newTag {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #EA2027;
+  padding: 8px 24px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
 .price {
   font-size: 1.1em;
   margin: auto;
@@ -63,6 +83,21 @@
 }
 
 .rate {
+  cursor: pointer;
   font-size: 1.2em;
   color: #fff;
+}
+
+.rated {
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #EA2027;
+}
+
+.button {
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
 }

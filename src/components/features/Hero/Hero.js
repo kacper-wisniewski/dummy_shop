@@ -9,7 +9,7 @@ class Hero extends React.Component {
     index: 0,
   }
 
-  handleSelect (selectedIndex, e) {
+  handleSelect (selectedIndex) {
     this.setState({index: selectedIndex});
   }
 
@@ -18,7 +18,7 @@ class Hero extends React.Component {
     const { index } = this.state;
 
     return(
-      <Carousel activeIndex={index} onSelect={(e) => this.handleSelect(e)}>
+      <Carousel activeIndex={index} onSelect={() => this.handleSelect()}>
         {banners.map(elem => (
           <Carousel.Item key={elem.id}>
             <img
@@ -26,6 +26,7 @@ class Hero extends React.Component {
               src={elem.image}
               alt={elem.alt}
             />
+            <div className={styles.filter}></div>
             <Carousel.Caption>
               <h3>{ elem.title }</h3>
               <p>{ elem.description }</p>
