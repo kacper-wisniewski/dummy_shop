@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeartBroken, faHeart, faShoppingCart, faEye } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './ProductCard.module.scss';
-const ProductCard = ({ id, name, description, image, category, price, isRate, isNew, isPromo, promo, comprasion, likes, dislikes, addToCart, addRate, removeRate }) => {
-  
+
+const ProductCard = ({ id, name, description, image, category, price, isRate, isNew, isPromo, promo, comprasion, likes, dislikes, addToCart, addRate, removeRate }) => {  
   return (
     <div className={styles.component}>
       <span className={styles.tag}>{category}<br/>{ category }</span>

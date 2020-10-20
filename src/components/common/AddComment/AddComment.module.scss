@@ -1,0 +1,29 @@
+.component {
+  background: #fff;
+  padding: 20px 10px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.label {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.tag {
+  padding: 10px 20px;
+  background: #dfe4ea;
+  border-radius: 5px;
+}
+
+.input {
+  border-radius: 5px;
+  width: 100%;
+  padding: 20px 30px;
+}

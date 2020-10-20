@@ -48,7 +48,7 @@ class ProductList extends React.Component{
         <Container >
           <Row>
             <Col>
-              <h2>{category.map(elem => (elem.name))}</h2>
+              <h2>{ category }</h2>
             </Col>
           </Row>
           <Row xs={1}>

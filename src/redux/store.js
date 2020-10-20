@@ -4,11 +4,13 @@ import initialState from './initialState';
 import productsReducer from  './productsRedux';
 import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
+import opinionsReducer from './opinionsRedux';
 
 const reducers = {
   products: productsReducer,
   cart: cartReducer,
   categories: categoriesReducer,
+  opinions: opinionsReducer,
 };
 
 Object.keys(initialState).forEach(item => {

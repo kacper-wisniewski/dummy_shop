@@ -13,11 +13,7 @@ const getDots = (products) => {
 }
 
 const getCategory = (categories, filter) => {
-  return (categories.filter(elem => {
-    if (elem.id === filter) {
-      return `${elem.name}`;
-    }
-  }));
+  return categories.filter(elem => elem.id === filter)[0].name;
 };
 
 const mapStateToProps = (state, props) => ({

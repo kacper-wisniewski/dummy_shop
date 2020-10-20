@@ -23,7 +23,6 @@ class Cart extends React.Component {
   render() {
     const { cart, removeFromCart } = this.props;
     const { open } = this.state;
-    console.log(cart);
     return (
       <div className={styles.component}>
         <div onClick={() => this.handleCartViewChange()}>

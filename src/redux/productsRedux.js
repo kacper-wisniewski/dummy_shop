@@ -28,9 +28,7 @@ export const getFiltredCount = ({ products }, filter) => {
   }
 }
 export const getProductById = ( {products }, id) => {
-  return products.filter(elem => {
-    if (`${elem.id}` === id) return elem;
-  })[0];
+  return products.filter(elem => `${elem.id}` === id)[0];
 }
 
 const reducerName = 'products';
